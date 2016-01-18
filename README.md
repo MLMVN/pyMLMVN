@@ -1,5 +1,5 @@
 # pyMLMVN - a simulator for MLMVN in Python
-### Note - Please do not confuse with [MiraHead’s excellent but unaffiliated PyMLMVN](https://github.com/MiraHead/mlmvn)
+Note - Please do not confuse with [MiraHead’s excellent but unaffiliated PyMLMVN](https://github.com/MiraHead/mlmvn)
 
 ## Goals
 * Implement a functional simulator for Multi-Layered neural networks with Multi-Valued Neurons (MLMVN)
@@ -13,10 +13,12 @@
 ### Core Requirements
 * Python 2.7
 * [SciPy](http://www.scipy.org/)
+
 ### CUDA Requirements
 * [CUDA Framework (>= 6.5)](http://www.nvidia.com/object/cuda_home_new.html)
 * [pycuda (>= 2014.1)](http://mathema.tician.de/software/pycuda/)
 * [scikit-cuda (>= 0.5.0a3)](https://github.com/lebedov/scikit-cuda)
+
 ### GUI Requirements
 * [Qt 4 Framework](http://www.qt.io/)
 * [PySide (>= 1.2.2)](https://pypi.python.org/pypi/PySide/1.2.4)
@@ -68,5 +70,25 @@ testNet.learn()
   - set to `None` or 0 to disable, default is 1 (updates every iteration)
 15. timeLimit: integer, number of seconds (by system clock) the simulator’s learning algorithm will run before quitting
 
-
-
+## Project Status
+- [ ] Core
+  - [x] Learning
+  - [x] Testing
+  - [x] Filtering
+  - [x] Weights import/export
+  - [ ] Global error calculation
+    - [x] MSE & RMSE
+    - [ ] Error Rate (not tested)
+    - [ ] Max Absolute Error (not tested)
+    - [ ] Angular RMSE (not tested)
+  - [ ] Soft margins for ARMSE
+  - [ ] Batch learning
+  - [ ] Documentation (incomplete)
+- [ ] GUI
+  - [x] Basic interface
+  - [x] Management of multiple simulations
+  - [ ] Import/export of configuration files (not tested)
+  - [ ] Error monitoring (works, broken for multiple simulations)
+  - [x] Iteration limit on training
+  - [ ] Time limit on training
+- [x] GPU Acceleration (works, could always use work)
